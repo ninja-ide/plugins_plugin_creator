@@ -1,3 +1,11 @@
-from .plugin_creator import PluginCreatorAdmin
+from .plugin_creator import PluginCreatorPlugin as _PluginCreatorPlugin
 
-__all__ = ["PluginCreatorAdmin"]
+
+PluginCreatorPlugin = _PluginCreatorPlugin()
+
+
+def activate():
+    PluginCreatorPlugin.activate()
+
+
+__all__ = ["PluginCreatorPlugin"]
